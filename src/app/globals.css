@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@keyframes alertPop {
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.88);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes emojiBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-8deg) scale(1.08);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(-6px) rotate(8deg) scale(1.05);
+  }
+}
+
+@keyframes progressShrink {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(6deg);
+  }
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) scale(1.15);
+  }
+}
+
+.animate-alert-pop {
+  animation: alertPop 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-emoji-bounce {
+  animation: emojiBounce 2.2s ease-in-out infinite;
+}
+
+.animate-progress-shrink {
+  animation-name: progressShrink;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.5s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: floatFast 2.4s ease-in-out infinite;
+}
+
